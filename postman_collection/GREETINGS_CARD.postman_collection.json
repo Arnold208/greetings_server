@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "75f43ec6-9597-4956-94d9-7becaf370902",
+		"name": "GREETINGS_CARD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22809099",
+		"_collection_link": "https://galactic-station-287916.postman.co/workspace/Crowdsense~bdd43db1-a838-4220-b15c-166994a2d32a/collection/22809099-75f43ec6-9597-4956-94d9-7becaf370902?action=share&source=collection_link&creator=22809099"
+	},
+	"item": [
+		{
+			"name": "Create a new greeting card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Thank You!\",\r\n  \"message\": \"Thanks for always being there!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://greetings-server-dg7y.onrender.com/greetings",
+					"protocol": "https",
+					"host": [
+						"greetings-server-dg7y",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"greetings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all greeting cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://greetings-server-dg7y.onrender.com/greetings",
+					"protocol": "https",
+					"host": [
+						"greetings-server-dg7y",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"greetings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a specific greeting card by its ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://greetings-server-dg7y.onrender.com/greetings/1",
+					"protocol": "https",
+					"host": [
+						"greetings-server-dg7y",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"greetings",
+						"1"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing greeting card by its ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Title\",\r\n  \"message\": \"This is the updated message.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://greetings-server-dg7y.onrender.com/greetings/1",
+					"protocol": "https",
+					"host": [
+						"greetings-server-dg7y",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"greetings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a specific greeting card by its ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://greetings-server-dg7y.onrender.com/greetings/1",
+					"protocol": "https",
+					"host": [
+						"greetings-server-dg7y",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"greetings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
