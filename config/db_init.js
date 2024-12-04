@@ -2,8 +2,8 @@ const pool = require('./db');
 
 const createTables = async () => {
   // SQL queries to drop existing tables
-  const dropGreetingsTableQuery = `DROP TABLE IF EXISTS greetings CASCADE;`;
-  const dropUsersTableQuery = `DROP TABLE IF EXISTS users CASCADE;`;
+  //const dropGreetingsTableQuery = `DROP TABLE IF EXISTS greetings CASCADE;`;
+  //const dropUsersTableQuery = `DROP TABLE IF EXISTS users CASCADE;`;
 
   // SQL queries to create new tables
   const createGreetingsTableQuery = `
@@ -26,12 +26,12 @@ const createTables = async () => {
 
   try {
     // Drop existing tables
-    console.log('Dropping existing tables...');
-    await pool.query(dropGreetingsTableQuery);
-    console.log('Table "greetings" has been dropped.');
+   // console.log('Dropping existing tables...');
+    //await pool.query(dropGreetingsTableQuery);
+    //console.log('Table "greetings" has been dropped.');
 
-    await pool.query(dropUsersTableQuery);
-    console.log('Table "users" has been dropped.');
+    //await pool.query(dropUsersTableQuery);
+    //console.log('Table "users" has been dropped.');
 
     // Create new tables
     console.log('Creating new tables...');
